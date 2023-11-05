@@ -3,10 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, EffectCoverflow } from "swiper/modules";
 import { ref, onMounted } from "vue";
 
-const clients = ref<any>([]);
+const clients = ref([]);
 
 async function fetchClients() {
-    clients.value = await getTestimonies();
+    clients.value = await $fetch("api/clients");
 }
 
 onMounted(() => {
@@ -59,7 +59,7 @@ onMounted(() => {
                     >
                         <swiper-slide
                             v-for="client in clients"
-                            :key="client.name"
+                            :key="client.id"
                             class="p-8 sm:p-4"
                         >
                             <HomeClient :client="client" />

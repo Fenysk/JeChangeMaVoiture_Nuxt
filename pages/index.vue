@@ -2,7 +2,7 @@
     <main class="w-full">
         <HomeHero />
 
-        <!-- <HomeClients /> -->
+        <HomeClients />
 
         <HomeAbout />
 
