@@ -8,7 +8,7 @@
             <img
                 src="~/assets/logo.png"
                 alt="Logo JeChangeMaVoiture.fr"
-                class="object-contain h-full max-w-xs"
+                class="object-contain w-64"
             />
             <p class="text-xl">© 2023</p>
         </div>

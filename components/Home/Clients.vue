@@ -5,11 +5,11 @@ import { Autoplay, EffectCoverflow } from "swiper/modules";
 const clients = ref([]);
 
 async function fetchClients() {
-    clients.value = await $fetch("clients");
+    clients.value = await $fetch("api/clients");
 }
 
-onBeforeMount(() => {
-    fetchClients();
+onBeforeMount(async () => {
+    await fetchClients();
 });
 </script>
 
