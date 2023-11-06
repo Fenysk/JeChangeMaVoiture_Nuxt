@@ -41,37 +41,39 @@ async function submitForm(formData: HTMLFormElement) {
                     ref="form"
                     class="w-full p-4 text-black bg-gray-50 shadow lg:p-8 md:rounded-xl"
                 >
-                    <h3 class="font-semibold text-2xl">Vos critères</h3>
-
-                    <!-- Contenu du formulaire -->
+                    <h3 class="mb-4 font-semibold text-2xl">Vos critères</h3>
 
                     <!-- Type d'offre -->
                     <div>
                         <label class="block mb-2 font-semibold"
                             >Type d'offre</label
                         >
-                        <div class="flex flex-col mb-4">
+                        <div id="Radio">
+                            <input
+                                required
+                                type="radio"
+                                name="typeOffre"
+                                id="typeOffreNeuf"
+                                value="neuf"
+                            />
                             <label
+                                for="typeOffreNeuf"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="typeOffre"
-                                    value="neuf"
-                                    class="mr-2"
-                                />
-                                Neuf
+                                <span>Neuf</span>
                             </label>
+                            <input
+                                required
+                                type="radio"
+                                name="typeOffre"
+                                id="typeOffreOccasion"
+                                value="occasion"
+                            />
                             <label
+                                for="typeOffreOccasion"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="typeOffre"
-                                    value="occasion"
-                                    class="mr-2"
-                                />
-                                Occasion
+                                <span>Occasion</span>
                             </label>
                         </div>
                     </div>
@@ -81,72 +83,148 @@ async function submitForm(formData: HTMLFormElement) {
                         <label class="block mb-2 font-semibold"
                             >Type de véhicule</label
                         >
-                        <div class="flex flex-col mb-4">
+                        <div id="Radio">
+                            <!-- Berline -->
+                            <input
+                                required
+                                type="radio"
+                                name="typeVehicule"
+                                id="typeVehiculeBerline"
+                                value="berline"
+                            />
                             <label
+                                for="typeVehiculeBerline"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="typeVehicule"
-                                    value="citadine"
-                                    class="mr-2"
-                                />
-                                Citadine
+                                <span>Berline</span>
+                                <IconsCarsBerline class="w-full h-full" />
                             </label>
+
+                            <!-- Break -->
+                            <input
+                                required
+                                type="radio"
+                                name="typeVehicule"
+                                id="typeVehiculeBreak"
+                                value="break"
+                            />
                             <label
+                                for="typeVehiculeBreak"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="typeVehicule"
-                                    value="berline"
-                                    class="mr-2"
-                                />
-                                Berline
+                                <span>Break</span>
+                                <IconsCarsBreak class="w-full h-full" />
                             </label>
+
+                            <!-- Citadine -->
+                            <input
+                                required
+                                type="radio"
+                                name="typeVehicule"
+                                id="typeVehiculeCitadine"
+                                value="citadine"
+                            />
                             <label
+                                for="typeVehiculeCitadine"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="typeVehicule"
-                                    value="suv"
-                                    class="mr-2"
-                                />
-                                SUV
+                                <span>Citadine</span>
+                                <IconsCarsCitadine class="w-full h-full" />
                             </label>
+
+                            <!-- Monospace -->
+                            <input
+                                required
+                                type="radio"
+                                name="typeVehicule"
+                                id="typeVehiculeMonospace"
+                                value="monospace"
+                            />
                             <label
+                                for="typeVehiculeMonospace"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="typeVehicule"
-                                    value="monospace"
-                                    class="mr-2"
-                                />
-                                Monospace
+                                <span>Monospace</span>
+                                <IconsCarsMonospace class="w-full h-full" />
                             </label>
+
+                            <!-- SUV -->
+                            <input
+                                required
+                                type="radio"
+                                name="typeVehicule"
+                                id="typeVehiculeSUV"
+                                value="suv"
+                            />
                             <label
+                                for="typeVehiculeSUV"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="typeVehicule"
-                                    value="utilitaire"
-                                    class="mr-2"
-                                />
-                                Utilitaire
+                                <span>SUV</span>
+                                <IconsCarsSUV class="w-full h-full" />
                             </label>
+
+                            <!-- Coupée -->
+                            <input
+                                required
+                                type="radio"
+                                name="typeVehicule"
+                                id="typeVehiculeCoupee"
+                                value="coupee"
+                            />
                             <label
+                                for="typeVehiculeCoupee"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="typeVehicule"
-                                    value="coupee"
-                                    class="mr-2"
-                                />
-                                Coupée
+                                <span>Coupée</span>
+                                <IconsCarsCoupee class="w-full h-full" />
+                            </label>
+
+                            <!-- Cabriolet -->
+                            <input
+                                required
+                                type="radio"
+                                name="typeVehicule"
+                                id="typeVehiculeCabriolet"
+                                value="cabriolet"
+                            />
+                            <label
+                                for="typeVehiculeCabriolet"
+                                class="flex items-center mb-2 cursor-pointer"
+                            >
+                                <span>Cabriolet</span>
+                                <IconsCarsCabriolet class="w-full h-full" />
+                            </label>
+
+                            <!-- Pick-up -->
+                            <input
+                                required
+                                type="radio"
+                                name="typeVehicule"
+                                id="typeVehiculePickup"
+                                value="pick-up"
+                            />
+                            <label
+                                for="typeVehiculePickup"
+                                class="flex items-center mb-2 cursor-pointer"
+                            >
+                                <span>Pick-up</span>
+                                <IconsCarsPickup class="w-full h-full" />
+                            </label>
+
+                            <!-- Autre -->
+                            <input
+                                required
+                                type="radio"
+                                name="typeVehicule"
+                                id="typeVehiculeAutre"
+                                value="autre"
+                            />
+                            <label
+                                for="typeVehiculeAutre"
+                                class="flex items-center mb-2 cursor-pointer"
+                            >
+                                <span>Autre</span>
                             </label>
                         </div>
                     </div>
@@ -180,28 +258,35 @@ async function submitForm(formData: HTMLFormElement) {
                         <label class="block mb-2 font-semibold"
                             >Type de boite</label
                         >
-                        <div class="flex flex-col mb-4">
+                        <div id="Radio">
+                            <!-- Manuelle -->
+                            <input
+                                required
+                                type="radio"
+                                name="typeBoite"
+                                id="typeBoiteManuelle"
+                                value="manuelle"
+                            />
                             <label
+                                for="typeBoiteManuelle"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="typeBoite"
-                                    value="manuelle"
-                                    class="mr-2"
-                                />
-                                Manuelle
+                                <span>Manuelle</span>
                             </label>
+
+                            <!-- Automatique -->
+                            <input
+                                required
+                                type="radio"
+                                name="typeBoite"
+                                id="typeBoiteAutomatique"
+                                value="automatique"
+                            />
                             <label
+                                for="typeBoiteAutomatique"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="typeBoite"
-                                    value="automatique"
-                                    class="mr-2"
-                                />
-                                Automatique
+                                <span>Automatique</span>
                             </label>
                         </div>
                     </div>
@@ -211,50 +296,65 @@ async function submitForm(formData: HTMLFormElement) {
                         <label class="block mb-2 font-semibold"
                             >Type de moteur</label
                         >
-                        <div class="flex flex-col mb-4">
+                        <div id="Radio">
+                            <!-- Essence -->
+                            <input
+                                required
+                                type="radio"
+                                name="typeMoteur"
+                                id="typeMoteurEssence"
+                                value="essence"
+                            />
                             <label
+                                for="typeMoteurEssence"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="typeMoteur"
-                                    value="essence"
-                                    class="mr-2"
-                                />
-                                Essence
+                                <span>Essence</span>
                             </label>
+
+                            <!-- Diesel -->
+                            <input
+                                required
+                                type="radio"
+                                name="typeMoteur"
+                                id="typeMoteurDiesel"
+                                value="diesel"
+                            />
                             <label
+                                for="typeMoteurDiesel"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="typeMoteur"
-                                    value="diesel"
-                                    class="mr-2"
-                                />
-                                Diesel
+                                <span>Diesel</span>
                             </label>
+
+                            <!-- Hybride -->
+                            <input
+                                required
+                                type="radio"
+                                name="typeMoteur"
+                                id="typeMoteurHybride"
+                                value="hybride"
+                            />
                             <label
+                                for="typeMoteurHybride"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="typeMoteur"
-                                    value="hybride"
-                                    class="mr-2"
-                                />
-                                Hybride
+                                <span>Hybride</span>
                             </label>
+
+                            <!-- Electrique -->
+                            <input
+                                required
+                                type="radio"
+                                name="typeMoteur"
+                                id="typeMoteurElectrique"
+                                value="electrique"
+                            />
                             <label
+                                for="typeMoteurElectrique"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="typeMoteur"
-                                    value="electrique"
-                                    class="mr-2"
-                                />
-                                Electrique
+                                <span>Electrique</span>
                             </label>
                         </div>
                     </div>
@@ -288,28 +388,35 @@ async function submitForm(formData: HTMLFormElement) {
                         <label class="block mb-2 font-semibold"
                             >Vous voulez...</label
                         >
-                        <div class="flex flex-col mb-4">
+                        <div id="Radio">
+                            <!-- Acheter -->
+                            <input
+                                required
+                                type="radio"
+                                name="acheterLouer"
+                                id="acheterLouerAcheter"
+                                value="acheter"
+                            />
                             <label
+                                for="acheterLouerAcheter"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="choix"
-                                    value="acheter"
-                                    class="mr-2"
-                                />
-                                Acheter
+                                <span>Acheter</span>
                             </label>
+
+                            <!-- Louer -->
+                            <input
+                                required
+                                type="radio"
+                                name="acheterLouer"
+                                id="acheterLouerLouer"
+                                value="louer"
+                            />
                             <label
+                                for="acheterLouerLouer"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="choix"
-                                    value="louer"
-                                    class="mr-2"
-                                />
-                                Louer
+                                <span>Louer</span>
                             </label>
                         </div>
                     </div>
@@ -320,6 +427,7 @@ async function submitForm(formData: HTMLFormElement) {
                             >Budget maxi</label
                         >
                         <input
+                            required
                             type="number"
                             name="budget"
                             min="15000"
@@ -333,49 +441,61 @@ async function submitForm(formData: HTMLFormElement) {
                         <label class="block mb-2 font-semibold"
                             >Date du projet</label
                         >
-                        <div class="flex flex-col mb-4">
+                        <div id="Radio">
+                            <!-- Immédiat -->
+                            <input
+                                required
+                                type="radio"
+                                name="dateProjet"
+                                id="dateProjetImmediat"
+                                value="immediat"
+                            />
                             <label
+                                for="dateProjetImmediat"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="dateProjet"
-                                    value="1-3 mois"
-                                    class="mr-2"
-                                />
-                                Immédiat
+                                <span>Immédiat</span>
                             </label>
+
+                            <!-- Moins de 3 mois -->
+                            <input
+                                required
+                                type="radio"
+                                name="dateProjet"
+                                id="dateProjetMoins3"
+                                value="moins3"
+                            />
                             <label
+                                for="dateProjetMoins3"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="dateProjet"
-                                    value="3-6 mois"
-                                    class="mr-2"
-                                />
-                                Moins de 3 mois
+                                <span>Moins de 3 mois</span>
                             </label>
+
+                            <!-- Plus de 3 mois -->
+                            <input
+                                required
+                                type="radio"
+                                name="dateProjet"
+                                id="dateProjetPlus3"
+                                value="plus3"
+                            />
                             <label
+                                for="dateProjetPlus3"
                                 class="flex items-center mb-2 cursor-pointer"
                             >
-                                <input
-                                    type="radio"
-                                    name="dateProjet"
-                                    value="6-12 mois"
-                                    class="mr-2"
-                                />
-                                Plus de 3 mois
+                                <span>Plus de 3 mois</span>
                             </label>
                         </div>
                     </div>
 
-                    <h3 class="font-semibold text-2xl">Vos coordonnées</h3>
+                    <h3 class="mb-4 font-semibold text-2xl">Vos coordonnées</h3>
 
                     <!-- Nom -->
                     <div>
                         <label class="block mb-2 font-semibold">Nom</label>
                         <input
+                            required
                             type="text"
                             name="nom"
                             class="w-full px-4 py-2 mb-4 border rounded-md"
@@ -386,6 +506,7 @@ async function submitForm(formData: HTMLFormElement) {
                     <div>
                         <label class="block mb-2 font-semibold">Prénom</label>
                         <input
+                            required
                             type="text"
                             name="prenom"
                             class="w-full px-4 py-2 mb-4 border rounded-md"
@@ -398,6 +519,7 @@ async function submitForm(formData: HTMLFormElement) {
                             >Numéro et nom de rue</label
                         >
                         <input
+                            required
                             type="text"
                             name="adresseNumero"
                             class="w-full px-4 py-2 mb-4 border rounded-md"
@@ -410,6 +532,7 @@ async function submitForm(formData: HTMLFormElement) {
                             >Code postal</label
                         >
                         <input
+                            required
                             type="number"
                             name="codePostal"
                             class="w-full px-4 py-2 mb-4 border rounded-md"
@@ -420,6 +543,7 @@ async function submitForm(formData: HTMLFormElement) {
                     <div>
                         <label class="block mb-2 font-semibold">Ville</label>
                         <input
+                            required
                             type="text"
                             name="ville"
                             class="w-full px-4 py-2 mb-4 border rounded-md"
@@ -430,6 +554,7 @@ async function submitForm(formData: HTMLFormElement) {
                     <div>
                         <label class="block mb-2 font-semibold">Pays</label>
                         <input
+                            required
                             type="text"
                             name="pays"
                             class="w-full px-4 py-2 mb-4 border rounded-md"
@@ -440,6 +565,7 @@ async function submitForm(formData: HTMLFormElement) {
                     <div>
                         <label class="block mb-2 font-semibold">Email</label>
                         <input
+                            required
                             type="email"
                             name="email"
                             class="w-full px-4 py-2 mb-4 border rounded-md"
@@ -452,6 +578,7 @@ async function submitForm(formData: HTMLFormElement) {
                             >Téléphone</label
                         >
                         <input
+                            required
                             type="tel"
                             name="telephone"
                             class="w-full px-4 py-2 mb-4 border rounded-md"
@@ -470,12 +597,12 @@ async function submitForm(formData: HTMLFormElement) {
                     </div>
 
                     <!-- Bouton d'envoi -->
-                    <div class="flex justify-center">
+                    <div class="flex justify-end">
                         <button
                             type="submit"
-                            class="px-4 py-2 text-white bg-blue-900 rounded-md"
+                            class="px-4 py-2 text-white bg-blue-900 rounded-md hover:bg-blue-800"
                         >
-                            Envoyer
+                            Envoyer votre projet
                         </button>
                     </div>
                 </form>
@@ -487,9 +614,22 @@ async function submitForm(formData: HTMLFormElement) {
 <style scoped>
 #Contact {
     background-image: url("~/assets/car.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    @apply bg-center bg-cover bg-fixed bg-no-repeat;
+}
+
+#Radio {
+    @apply flex flex-row gap-4 flex-wrap mb-4;
+}
+
+#Radio input[type="radio"] {
+    @apply sr-only;
+}
+
+#Radio label {
+    @apply border w-24 h-24 rounded-lg p-2 flex flex-col justify-around items-center cursor-pointer hover:border-blue-400;
+}
+
+#Radio input[type="radio"]:checked + label {
+    @apply border-4 border-blue-700;
 }
 </style>
