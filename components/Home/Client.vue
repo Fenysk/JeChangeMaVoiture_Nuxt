@@ -15,9 +15,9 @@ export default {
             background: linear-gradient(
                 0deg,
                 rgba(0, 0, 0, 1) 0%,
-                rgba(0, 0, 0, 0.9) 30%,
-                rgba(0, 0, 0, 0) 60%,
-                rgba(0, 0, 0, 0) 70%,
+                rgba(0, 0, 0, 0.9) 20%,
+                rgba(0, 0, 0, 0) 40%,
+                rgba(0, 0, 0, 0) 80%,
                 rgba(0, 0, 0, 1) 100%
             );
         "
@@ -32,7 +32,7 @@ export default {
             </p>
         </div>
         <img
-            src="~/assets/client.jpg"
+            :src="'/photos/' + client.image"
             :alt="client.name"
             class="absolute h-full top-0 left-0 w-full object-cover z-[-5]"
         />

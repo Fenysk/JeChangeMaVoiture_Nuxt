@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Jean Dupont",
+        "age": 35,
+        "profession": "Ingénieur",
+        "testimony": "Je suis très satisfait de ce site. Il m'a permis de trouver un véhicule qui correspondait parfaitement à mes besoins.",
+        "image": "client.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Marie Martin",
+        "age": 28,
+        "profession": "Enseignante",
+        "testimony": "Je suis extrêmement satisfaite de ce site. Il m'a aidée à trouver un véhicule qui répondait à toutes mes attentes.",
+        "image": "client.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Lucie Dubois",
+        "age": 42,
+        "profession": "Médecin",
+        "testimony": "Mon expérience avec ce site a été exceptionnelle. J'ai pu trouver un véhicule qui correspondait exactement à mes critères.",
+        "image": "client.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Pierre Leroy",
+        "age": 30,
+        "profession": "Avocat",
+        "testimony": "Je suis entièrement satisfait de ce site. Il m'a permis de dénicher un véhicule qui répondait parfaitement à mes besoins.",
+        "image": "client.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Sophie Rousseau",
+        "age": 36,
+        "profession": "Graphiste",
+        "testimony": "Mon expérience avec ce site a été très positive. Il m'a aidée à trouver un véhicule qui correspondait à mes exigences professionnelles.",
+        "image": "client.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Éric Dubois",
+        "age": 45,
+        "profession": "Entrepreneur",
+        "testimony": "Je suis extrêmement satisfait de ce site. Il m'a permis de trouver un véhicule qui correspondait parfaitement à mes besoins professionnels.",
+        "image": "client.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Julie Martin",
+        "age": 32,
+        "profession": "Architecte",
+        "testimony": "Mon expérience avec ce site a été exceptionnelle. J'ai pu trouver un véhicule qui correspondait exactement à mes critères professionnels.",
+        "image": "client.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Thomas Dupont",
+        "age": 38,
+        "profession": "Consultant",
+        "testimony": "Je suis très satisfait de ce site. Il m'a permis de dénicher un véhicule qui répondait parfaitement à mes besoins professionnels.",
+        "image": "client.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Caroline Lefebvre",
+        "age": 29,
+        "profession": "Infirmière",
+        "testimony": "Mon expérience avec ce site a été très positive. Il m'a aidée à trouver un véhicule qui correspondait à mes exigences personnelles.",
+        "image": "client.jpg"
+    }
+]

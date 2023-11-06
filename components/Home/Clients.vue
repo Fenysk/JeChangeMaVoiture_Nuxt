@@ -1,21 +1,20 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, EffectCoverflow } from "swiper/modules";
-import { ref, onMounted } from "vue";
 
 const clients = ref([]);
 
 async function fetchClients() {
-    clients.value = await $fetch("api/clients");
+    clients.value = await $fetch("clients");
 }
 
-onMounted(() => {
+onBeforeMount(() => {
     fetchClients();
 });
 </script>
 
 <template>
-    <section id="Clients" class="relative">
+    <section id="Clients" class="relative" v-if="clients.length > 0">
         <div class="flex w-full text-white bg-black">
             <div class="w-full py-12 pt-32">
                 <h2 class="px-2 text-4xl font-semibold text-center">
@@ -25,7 +24,7 @@ onMounted(() => {
                 <div class="mt-4">
                     <swiper
                         v-if="clients.length > 0"
-                        class="h-[60vh]"
+                        class="h-[50vh]"
                         :modules="[EffectCoverflow, Autoplay]"
                         :effect="'coverflow'"
                         :grab-cursor="true"
