@@ -3,7 +3,7 @@ useHead({
     link: [
         {
             rel: "canonical",
-            href: "https://jechangemavoiture.fr",
+            href: "https://jechangemavoiture.gailleton.fr",
         },
     ],
 });
