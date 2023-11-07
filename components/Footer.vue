@@ -6,7 +6,8 @@
     >
         <div class="flex flex-col items-center gap-4 sm:flex-row">
             <img
-                src="~/assets/logo.png"
+loading="lazy"
+                src="/logo.png"
                 alt="Logo JeChangeMaVoiture.fr"
                 class="object-contain w-64"
             />

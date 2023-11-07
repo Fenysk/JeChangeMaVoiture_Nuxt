@@ -7,7 +7,7 @@ const voitures = <any>[];
 
 for (let i = 0; i < 10; i++) {
     voitures.push({
-        image: `https://images.bfmtv.com/5WFJEvvCnxpyn6uu1pCMY_oQyhY=/0x0:2048x1152/2048x0/images/Ferrari-812-Competizione-1459629.jpg`,
+        image: `photos/ferrari.webp`,
     });
 }
 </script>
@@ -54,6 +54,7 @@ for (let i = 0; i < 10; i++) {
                                 :key="voiture.name"
                             >
                                 <img
+                                    loading="lazy"
                                     :src="voiture.image"
                                     :alt="voiture.name"
                                     class="object-cover object-center h-full mx-auto aspect-video"
@@ -70,7 +71,8 @@ for (let i = 0; i < 10; i++) {
             playsinline
             loop
             muted
-            src="~/assets/animation.mp4"
+            loading="lazy"
+            src="~/assets/animation.webm"
             class="absolute top-0 left-0 h-full w-full object-cover z-[-100]"
         ></video>
     </section>

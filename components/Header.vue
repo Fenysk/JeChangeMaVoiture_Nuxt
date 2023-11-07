@@ -5,7 +5,8 @@
         <nav class="flex flex-col items-center justify-center h-full gap-4 p-4">
             <a href="/" id="branding" class="flex items-center h-full">
                 <img
-                    src="~/assets/logo.png"
+loading="lazy"
+                    src="/logo.png"
                     alt="Logo JeChangeMaVoiture.fr"
                     class="object-contain w-72 sm:w-96"
                 />

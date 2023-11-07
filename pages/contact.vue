@@ -1,4 +1,14 @@
 <script setup lang="ts">
+useHead({
+    title: "JeChangeMaVoiture.fr - Votre projet automobile",
+    meta: [
+        {
+            name: "description",
+            content: "Faites-moi part de votre projet automobile, je vous ferai un retour sous 24h !",
+        },
+    ],
+});
+
 import emailjs from "@emailjs/browser";
 
 async function submitForm(formData: HTMLFormElement) {
