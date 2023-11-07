@@ -6,12 +6,12 @@ export default defineNuxtConfig({
     },
     app: {
         head: {
-            title: "JeChangeMaVoiture.fr - Votre prochaine voiture au meilleur prix, selon vos critères !",
+            title: "JeChangeMaVoiture.fr - Votre prochaine voiture aux meilleures conditions !",
             meta: [
                 {
                     name: "description",
                     content:
-                        "Nous vous aidons dans votre recherche de voiture de n'importe quelle marque, n'importe quel prix et selon vos critères ! Et nous vous la livrons directement chez vous !",
+                        "Nous vous aidons dans votre recherche de voiture selon vos critères, votre budget ; et nous vous la livrons directement chez vous !",
                 },
             ],
         },

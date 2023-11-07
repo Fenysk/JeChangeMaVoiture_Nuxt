@@ -7,7 +7,8 @@ const voitures = <any>[];
 
 for (let i = 0; i < 10; i++) {
     voitures.push({
-        image: `photos/ferrari.webp`,
+        image: "photos/ferrari.webp",
+        name: "Ferrari",
     });
 }
 </script>

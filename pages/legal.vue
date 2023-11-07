@@ -7,6 +7,12 @@ useHead({
             content: "Mentions légales du site jechangemavoiture.fr",
         },
     ],
+    link: [
+        {
+            rel: "canonical",
+            href: "https://jechangemavoiture.fr/legal",
+        },
+    ],
 });
 </script>
 

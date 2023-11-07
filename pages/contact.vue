@@ -4,7 +4,14 @@ useHead({
     meta: [
         {
             name: "description",
-            content: "Faites-moi part de votre projet automobile, je vous ferai un retour sous 24h !",
+            content:
+                "Faites-moi part de votre projet automobile, je vous ferai un retour sous 24h !",
+        },
+    ],
+    link: [
+        {
+            rel: "canonical",
+            href: "https://jechangemavoiture.fr/contact",
         },
     ],
 });

@@ -7,7 +7,7 @@
         <div class="flex flex-col items-center gap-4 sm:flex-row">
             <img
 loading="lazy"
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Logo JeChangeMaVoiture.fr"
                 class="object-contain w-64"
             />
