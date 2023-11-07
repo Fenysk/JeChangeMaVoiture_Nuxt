@@ -45,6 +45,7 @@ for (let i = 0; i < 10; i++) {
                                 delay: 2000,
                                 disableOnInteraction: false,
                             }"
+                            :allowTouchMove="false"
                             :speed="1000"
                             :loop="true"
                             :slides-per-view="1"
