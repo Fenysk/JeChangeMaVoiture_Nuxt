@@ -2,6 +2,7 @@
 const route = useRoute();
 
 const client = await $fetch(`/api/clients/${route.params.id}`);
+
 const name = ref(client.name);
 const age = ref(client.age);
 const profession = ref(client.profession);

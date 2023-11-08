@@ -25,7 +25,7 @@ for (let i = 0; i < 10; i++) {
                 <div
                     class="py-6 text-4xl italic font-bold text-center text-white bg-black"
                 >
-                    <h2>Envie d'une nouvelle voiture ?</h2>
+                    <h1>Envie d'une nouvelle voiture ?</h1>
                 </div>
 
                 <div class="flex flex-col md:flex-row">

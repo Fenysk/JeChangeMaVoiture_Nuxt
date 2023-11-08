@@ -11,7 +11,7 @@ useHead({
     link: [
         {
             rel: "canonical",
-            href: "https://jechangemavoiture.gailleton.fr/contact",
+            href: "https://jechangemavoiture.fr/contact",
         },
     ],
 });

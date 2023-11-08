@@ -31,7 +31,7 @@ export default {
                 >
             </p>
         </div>
-        <img
+        <NuxtImg
             loading="lazy"
             :src="client.image"
             :alt="client.name"

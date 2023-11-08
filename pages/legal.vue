@@ -4,13 +4,13 @@ useHead({
     meta: [
         {
             name: "description",
-            content: "Mentions légales du site jechangemavoiture.fr",
+            content: "Mentions légales du site JeChangeMaVoiture.fr",
         },
     ],
     link: [
         {
             rel: "canonical",
-            href: "https://jechangemavoiture.gailleton.fr/legal",
+            href: "https://jechangemavoiture.fr/legal",
         },
     ],
 });
