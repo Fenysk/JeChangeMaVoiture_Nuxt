@@ -33,7 +33,7 @@ export default {
         </div>
         <img
             loading="lazy"
-            :src="'/photos/' + client.image"
+            :src="client.image"
             :alt="client.name"
             class="absolute h-full top-0 left-0 w-full object-cover z-[-5]"
         />

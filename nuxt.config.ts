@@ -14,6 +14,9 @@ export default defineNuxtConfig({
                         "Nous vous aidons dans votre recherche de voiture selon vos critères, votre budget ; et nous vous la livrons directement chez vous !",
                 },
             ],
+            htmlAttrs: {
+                lang: "fr",
+            },
         },
     },
     devtools: { enabled: true },
