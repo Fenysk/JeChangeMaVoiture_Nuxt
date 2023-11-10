@@ -7,6 +7,8 @@ export default {
         },
     },
 };
+
+const site_url = process.env.SITE_URL;
 </script>
 
 <template>
@@ -31,9 +33,9 @@ export default {
                 >
             </p>
         </div>
-        <NuxtImg
+        <img
             loading="lazy"
-            :src="client.image"
+            :src="site_url + client.image"
             :alt="client.name"
             class="absolute h-full top-0 left-0 w-full object-cover z-[-5]"
         />

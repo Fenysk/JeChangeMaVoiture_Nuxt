@@ -16,6 +16,10 @@ useHead({
     ],
 });
 
+definePageMeta({
+    auth: false,
+});
+
 import emailjs from "@emailjs/browser";
 
 async function submitForm(formData: HTMLFormElement) {
@@ -506,7 +510,9 @@ async function submitForm(formData: HTMLFormElement) {
                         </div>
                     </div>
 
-                    <h3 class="mb-4 font-semibold text-2xl">Vos coordonnées</h3>
+                    <h3 class="mb-4 mt-12 font-semibold text-2xl">
+                        Vos coordonnées
+                    </h3>
 
                     <!-- Nom -->
                     <div>

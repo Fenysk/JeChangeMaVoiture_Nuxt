@@ -13,6 +13,6 @@
             />
             <p class="text-xl">© 2023</p>
         </div>
-        <a href="/legal" class="text-xl">Mentions légales</a>
+        <NuxtLink to="/legal" class="text-xl">Mentions légales</NuxtLink>
     </footer>
 </template>

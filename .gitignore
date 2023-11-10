@@ -24,9 +24,9 @@ logs
 !.env.example
 
 # IMAGES
-.png
-.jpg
-.jpeg
-.gif
-.webp
-.webm
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.webm

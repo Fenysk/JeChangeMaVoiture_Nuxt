@@ -14,6 +14,10 @@ useHead({
         },
     ],
 });
+
+definePageMeta({
+    auth: false,
+});
 </script>
 
 <template>

@@ -1,13 +1,10 @@
 <script setup lang="ts">
-const route = useRoute();
-
-const client = await $fetch(`/api/clients/${route.params.id}`);
-
-const name = ref(client.name);
-const age = ref(client.age);
-const profession = ref(client.profession);
-const testimony = ref(client.testimony);
-const image = ref(client.image);
+const name = ref(null);
+const age = ref(null);
+const profession = ref(null);
+const testimony = ref(null);
+const image = ref("client.webp");
+const site_url = process.env.SITE_URL;
 
 async function uploadImage(event) {
     const file = event.target.files[0];
@@ -20,10 +17,10 @@ async function uploadImage(event) {
     image.value = path;
 }
 
-async function updateClient() {
+async function createClient() {
     try {
-        const result = await $fetch(`/api/clients/${route.params.id}`, {
-            method: "PUT",
+        const result = await $fetch("/api/clients/create", {
+            method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
@@ -35,7 +32,7 @@ async function updateClient() {
                 image: image.value,
             }),
         });
-        navigateTo("/dashboard");
+        navigateTo("/dashboard-9a4d6f");
     } catch (error) {
         alert(error.message);
     }
@@ -44,8 +41,8 @@ async function updateClient() {
 
 <template>
     <main class="pt-44 container mx-auto">
-        <form @submit.prevent="updateClient">
-            <h1 class="text-xl font-bold mb-4">Modification du client</h1>
+        <form @submit.prevent="createClient">
+            <h1 class="text-xl font-bold mb-4">Création d'un nouveau client</h1>
             <input
                 required
                 type="text"
@@ -74,18 +71,22 @@ async function updateClient() {
             <div>
                 <input
                     @change="uploadImage($event)"
+                    required
                     type="file"
                     name="image"
                     placeholder="Image du client"
                 />
-                <img :src="image" class="aspect-square object-cover w-32" />
+                <img
+                    :src="site_url + image"
+                    class="aspect-square object-cover w-32"
+                />
             </div>
 
             <button
                 type="submit"
                 class="border px-4 py-2 rounded bg-blue-500 text-white"
             >
-                Modifier
+                Créer le client
             </button>
         </form>
     </main>

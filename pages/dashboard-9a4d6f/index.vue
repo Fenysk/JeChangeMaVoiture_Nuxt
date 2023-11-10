@@ -1,5 +1,29 @@
 <script setup lang="ts">
-const clients = await $fetch("/api/clients");
+const clients = ref([]);
+
+try {
+    clients.value = await $fetch("/api/clients");
+} catch (error) {
+    clients.value = [];
+}
+
+const site_url = process.env.SITE_URL;
+
+async function deleteClient(id: number) {
+    try {
+        if (!confirm("Êtes-vous sûr de vouloir supprimer cet avis client ?")) {
+            return;
+        }
+
+        const response = await $fetch(`/api/clients/${id}`, {
+            method: "DELETE",
+        });
+
+        window.location.reload();
+    } catch (error) {
+        alert(error.message);
+    }
+}
 </script>
 
 <template>
@@ -8,7 +32,10 @@ const clients = await $fetch("/api/clients");
             <div class="flex justify-between items-center mb-4">
                 <h2 class="text-xl font-semibold">Avis clients</h2>
 
-                <NuxtLink to="/dashboard/clients/new" class="button mb-4">
+                <NuxtLink
+                    to="/dashboard-9a4d6f/clients/new"
+                    class="button mb-4"
+                >
                     Ajouter un nouvel avis client
                 </NuxtLink>
             </div>
@@ -19,7 +46,7 @@ const clients = await $fetch("/api/clients");
                         class="flex border-4 border-blue-900 bg-blue-100 shadow rounded-lg overflow-hidden p-4 gap-4"
                     >
                         <img
-                            :src="client.image"
+                            :src="site_url + client.image"
                             :alt="'Photo de ' + client.name"
                             class="w-24 aspect-square object-cover rounded"
                         />
@@ -37,7 +64,9 @@ const clients = await $fetch("/api/clients");
                             </blockquote>
                         </div>
                         <div id="Controls" class="ml-auto flex flex-col gap-2">
-                            <NuxtLink :to="`/dashboard/clients/${client.id}`">
+                            <NuxtLink
+                                :to="`/dashboard-9a4d6f/clients/${client.id}`"
+                            >
                                 <IconsEdit
                                     class="w-10 h-10 bg-white rounded p-2 border shadow hover:scale-110 hover:text-blue-600 transition-all"
                                 />

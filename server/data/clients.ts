@@ -42,3 +42,12 @@ export async function updateClientByID(id: string, data: ClientDto) {
         throw new Error(error);
     }
 }
+
+export async function deleteClientByID(id: string) {
+    try {
+        const deletedClient = await prisma.client.delete({ where: { id } });
+        return deletedClient;
+    } catch (error: any) {
+        throw new Error(error);
+    }
+}

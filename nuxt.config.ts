@@ -43,24 +43,19 @@ export default defineNuxtConfig({
         },
     },
     devtools: { enabled: true },
-    image: {
-        format: ["avif", "webp"],
-        quality: 100,
-    },
     robots: {
         UserAgent: "*",
-        Disallow: ["/dashboard/**", "/connexion"],
+        Disallow: ["/dashboard-9a4d6f/**"],
     },
     site: {
         url: "https://jechangemavoiture.fr",
     },
     sitemap: {
-        exclude: ["/dashboard/**", "/connexion"],
+        exclude: ["/dashboard-9a4d6f/**"],
     },
     modules: [
         "@nuxtjs/tailwindcss",
         "nuxt-simple-sitemap",
         "nuxt-simple-robots",
-        "@nuxt/image",
     ],
 });
